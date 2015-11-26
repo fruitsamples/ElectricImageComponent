@@ -12,18 +12,6 @@
 			buildConfigurationList = 2B02CA6A0860062E00A34BD5 /* Build configuration list for PBXAggregateTarget "Build All" */;
 			buildPhases = (
 			);
-			buildSettings = {
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = "Build All";
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-			};
 			dependencies = (
 				2B5CDE7708724EA600EC3899 /* PBXTargetDependency */,
 				2B416FBA086E94CC00D1BBE8 /* PBXTargetDependency */,
@@ -86,31 +74,6 @@
 		2B5CDE6A08723FEA00EC3899 /* EIComponentMach0Universal.r in Rez */ = {isa = PBXBuildFile; fileRef = 2BFEC9A7086E8D500088FEC4 /* EIComponentMach0Universal.r */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		670471B500DAC9D405000001 /* Development */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				OPTIMIZATION_CFLAGS = "-O0";
-				ZERO_LINK = YES;
-			};
-			name = Development;
-		};
-		670471B600DAC9D405000001 /* Deployment */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXContainerItemProxy section */
 		2B416FB9086E94CC00D1BBE8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -130,9 +93,9 @@
 
 /* Begin PBXFileReference section */
 		2B416FB2086E919E00D1BBE8 /* ElectricImage(Universal).component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ElectricImage(Universal).component"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B416FB7086E93F700D1BBE8 /* Info-El_Component_Universal_Bundle.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "Info-El_Component_Universal_Bundle.plist"; sourceTree = "<group>"; };
+		2B416FB7086E93F700D1BBE8 /* Info-El_Component_Universal_Bundle.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "Info-El_Component_Universal_Bundle.plist"; sourceTree = "<group>"; };
 		2B5CDE5B08723EA300EC3899 /* ImportExample(Universal).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ImportExample(Universal).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B5CDE6408723F7600EC3899 /* Info-ImportExample_Universal.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xml; path = "Info-ImportExample_Universal.plist"; sourceTree = "<group>"; };
+		2B5CDE6408723F7600EC3899 /* Info-ImportExample_Universal.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "Info-ImportExample_Universal.plist"; sourceTree = "<group>"; };
 		2BB97A9704522ABD00CB1627 /* EI_Export.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = EI_Export.nib; path = ../EI_MovieExport/EI_Export.nib; sourceTree = SOURCE_ROOT; };
 		2BC05688087726C30051A883 /* EIComponentMach0Universal.r */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.rez; path = EIComponentMach0Universal.r; sourceTree = "<group>"; };
 		2BC05689087726C30051A883 /* EIComponentPB.r */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.rez; path = EIComponentPB.r; sourceTree = "<group>"; };
@@ -401,23 +364,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				EXPORTED_SYMBOLS_FILE = ../ExportsPB.exp;
-				OPTIMIZATION_CFLAGS = "-O0";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "-bundle";
-				OTHER_REZFLAGS = "-rd -i ../EI_GraphicsImport/ -i ../EI_GraphicsExport/ -i ../EI_MovieImport/ -i ../EI_MovieExport/ -i ../EI_ImageDecompressor/";
-				PREFIX_HEADER = ../PrefixIncludes/EIComponentStandAloneCarbon.h;
-				PRODUCT_NAME = ElectricImage;
-				SECTORDER_FLAGS = "";
-				USE_GCC3_PFE_SUPPORT = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = component;
-			};
 			dependencies = (
 			);
 			name = "El Component Bundle (Universal)";
@@ -438,22 +384,6 @@
 			);
 			buildRules = (
 			);
-			buildSettings = {
-				OPTIMIZATION_CFLAGS = "-O0";
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				OTHER_REZFLAGS = "-rd -i ../EI_GraphicsImport/ -i ../EI_GraphicsExport/ -i ../EI_MovieImport/ -i ../EI_MovieExport/ -i ../EI_ImageDecompressor/";
-				PRECOMPILE_PREFIX_HEADER = YES;
-				PREFIX_HEADER = ../PrefixIncludes/ImportExampleLinkedCarbon.h;
-				PRODUCT_NAME = ImportExample;
-				SECTORDER_FLAGS = "";
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-				);
-				WRAPPER_EXTENSION = app;
-			};
 			dependencies = (
 			);
 			name = "ImportExample (Universal)";
@@ -468,16 +398,12 @@
 		67B1196000DA8D7405000001 /* Project object */ = {
 			isa = PBXProject;
 			buildConfigurationList = 2B02CA58086005AA00A34BD5 /* Build configuration list for PBXProject "EIComponentSample" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				670471B500DAC9D405000001 /* Development */,
-				670471B600DAC9D405000001 /* Deployment */,
-			);
+			compatibilityVersion = "Xcode 2.4";
 			hasScannedForEncodings = 1;
 			mainGroup = 67B1196100DA8D7405000001;
 			productRefGroup = 67B1196600DA8E6705000001 /* Products */;
 			projectDirPath = "";
+			projectRoot = "";
 			targets = (
 				2B02CA650860062E00A34BD5 /* Build All */,
 				2B5CDE3808723EA300EC3899 /* ImportExample (Universal) */,
@@ -584,7 +510,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				REZ_RESOURCE_MAP_READ_ONLY = YES;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Development;
 		};
@@ -599,7 +525,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				REZ_RESOURCE_MAP_READ_ONLY = YES;
-				SDKROOT = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Deployment;
 		};
@@ -611,7 +537,6 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				OPTIMIZATION_CFLAGS = "-O0";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
